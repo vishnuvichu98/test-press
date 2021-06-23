@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Novus Admin Panel an Admin Panel Category Flat Bootstrap Responsive Website Template | Tables :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Novus Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="../static/dashboard/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="../static/dashboard/css/style.css" rel='stylesheet' type='text/css' />
+<link href="../static/dashboard/css/font-awesome.css" rel="stylesheet">
+<script src="../static/dashboard/js/jquery-1.11.1.min.js"></script>
+<script src="../static/dashboard/js/modernizr.custom.js"></script>
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href="../static/dashboard/css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="../static/dashboard/js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<script src="../static/dashboard/js/metisMenu.min.js"></script>
+<script src="../static/dashboard/js/custom.js"></script>
+<link href="../static/dashboard/css/custom.css" rel="stylesheet">
+</head> 
+<body class="cbp-spmenu-push">
+	<div class="main-content">
+		<div class=" sidebar" role="navigation">
+            <div class="navbar-collapse">
+				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+					<ul class="nav" id="side-menu">
+						<li>
+							<a href="/admin_dashboard"><i class="fa fa-table nav_icon"></i>Add/Edit Tables</a>
+						</li>
+						<li>
+							<a href="/admin_logout"><i class="fa fa-check-square-o nav_icon"></i>Logout</a>
+						</li>
+					</ul>
+					<div class="clearfix"> </div>
+				</nav>
+			</div>
+		</div>
+		<div class="sticky-header header-section ">
+			<div class="header-left">
+				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
+				<div class="logo">
+					<a href="/admin_dashboard">
+						<h1>XYZ Public School</h1>
+						<span>AdminPanel</span>
+					</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+
+				<div class="profile_details">		
+					<ul>
+						<li class="dropdown profile_details_drop">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<div class="profile_img">	
+									<span class="prfil-img"><img src="../static/dashboard/images/a.png" alt=""> </span>
+									<div class="user-name">
+										<p>{{ request.session.username }}</p>
+										<span>Administrator</span>
+									</div>
+									<i class="fa fa-angle-down lnr"></i>
+									<i class="fa fa-angle-up lnr"></i>
+									<div class="clearfix"></div>	
+								</div>	
+							</a>
+							<ul class="dropdown-menu drp-mnu">
+								<li> <a href="/admin_logout"><i class="fa fa-sign-out"></i>Logout</a> </li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>	
+			</div>
+			<div class="clearfix"> </div>	
+		</div>
+		<div id="page-wrapper">
+			<div class="main-page">
+				<div class="tables">
+					<h3 class="title1">Tables</h3>
+					<div id="contact">
+					<button type="button" style="margin-top:-20px;margin-bottom:10px;" class="btn btn-primary" data-toggle="modal" data-target="#contact-modal">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+  						<path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+						</svg> &nbsp;&nbsp;Add New Quiz </button></div>
+					<div id="contact-modal" class="modal fade" role="dialog">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<a class="close" data-dismiss="modal">×</a>
+									<h3>Contact Form</h3>
+								</div>
+								<form id="contactForm" name="contact" role="form" method="POST">
+									{% csrf_token %}
+									<div class="modal-body">
+										<div class="form-group">
+											<label for="name">Name</label>
+											<input type="text" name="name" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" name="email" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="message">Message</label>
+											<textarea name="message" class="form-control"></textarea>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<input type="submit" class="btn btn-success" id="submit">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="panel-body widget-shadow">
+						<h4>Questions:</h4>
+						<table class="table">
+							<thead>
+								<tr>
+								  <th>#</th>
+								  <th>Questions</th>
+								  <th>Correct Answer</th>
+								  <th>Option 1</th>
+									<th>Option 2</th>
+									<th>Option 3</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								  	<th scope="row">1</th>
+								  	<td>Mark</td>
+								  	<td>Otto</td>
+								  	<td>@mdo</td>
+									<td>abc</td>
+								</tr>
+								<tr>
+								  <th scope="row">2</th>
+								  <td>Jacob</td>
+								  <td>Thornton</td>
+								  <td>@fat</td>
+								</tr>
+								<tr>
+								  <th scope="row">3</th>
+								  <td>Larry</td>
+								  <td>the Bird</td>
+								  <td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+		   <p>Created By Vishnu Raj</p>
+		</div>
+	</div>
+		<script src="../static/dashboard/js/classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				body = document.body;
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+			}
+		</script>
+	<script src="../static/dashboard/js/jquery.nicescroll.js"></script>
+	<script src="../static/dashboard/js/scripts.js"></script>
+	<script src="../static/dashboard/js/bootstrap.js"> </script>
+</body>
+</html>
